@@ -1,0 +1,66 @@
+---
+interface props{
+    name: string;
+
+}
+
+const {name} = Astro.props as props
+---
+<header>
+    <div class="logo-container">
+        <div class="logo-img">
+            <!-- <img src="" alt=""> -->
+        </div>
+        <h1><span>{name}</span></h1>
+    </div>
+    <nav class="nav">
+        <ul class="nav-items">
+            <a href="#">
+                <li>Home</li>
+            </a><a href="#">
+                <li>About</li>
+            </a><a href="#">
+                <li>Contact</li>
+            </a>
+        </ul>
+    </nav>
+</header>
+<style>
+header{
+    height:4rem;
+    background-color: #1a202c;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+h1{
+    font-size: 2rem;
+}
+.logo-container{
+    display: flex;
+    align-items: center;
+    flex:1;
+}
+.nav{
+    flex:1;
+}
+.nav-items{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    list-style-type: none;
+}
+.nav-items a{
+    color:#fff;
+    text-decoration: none;
+    transition: text-shadow 0.6s ease;
+}
+.nav-items a:hover{
+    text-shadow: 0 5px 10px #fff;
+}
+@media (max-width: 768px){
+    .nav{
+        display: none;
+    }
+}
+</style>

@@ -1,0 +1,21 @@
+---
+interface props{
+    title: string;
+    author:string;
+    pubDate: string;
+}
+const { title, author, pubDate } = Astro.props as props;
+---
+
+<html>
+  <head>
+    <title>{title}</title>
+  </head>
+  <body>
+    <article>
+      <h1>{title}</h1>
+      <p><strong>By:</strong> {author} | <strong>Date:</strong> {pubDate}</p>
+      <slot />
+    </article>
+  </body>
+</html>

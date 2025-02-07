@@ -1,0 +1,44 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer>
+  <div class="container">
+    <p>&copy; {year} Note Spring. All rights reserved.</p>
+    <nav>
+      <a href="/about">About</a>
+      <a href="/privacy">Privacy Policy</a>
+      <a href="/terms">Terms of Service</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background-color: #1a202c;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  nav a {
+    color: #9ca3af;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover {
+    color: #fff;
+  }
+</style>
